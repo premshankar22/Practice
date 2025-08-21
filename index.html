@@ -1,332 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Landing Page</title>
-  <meta name="description" content="Clean, responsive landing page template with pure HTML + CSS.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0b0f1a;
-      --panel: #0f1424;
-      --text: #e6e9f2;
-      --muted: #a8b2d1;
-      --brand: #6c7cff;
-      --brand-2: #7ee7ff;
-      --accent: #22d3ee;
-      --ring: rgba(124, 134, 255, 0.35);
-      --card: #0d1220;
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Landing Page</title>
+    <meta
+      name="description"
+      content="Clean, responsive landing page template with pure HTML + CSS."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b0f1a;
+        --panel: #0f1424;
+        --text: #e6e9f2;
+        --muted: #a8b2d1;
+        --brand: #6c7cff;
+        --brand-2: #7ee7ff;
+        --accent: #22d3ee;
+        --ring: rgba(124, 134, 255, 0.35);
+        --card: #0d1220;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --radius: 16px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body{
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(124,134,255,.25), transparent 50%),
-                  radial-gradient(800px 400px at -10% -20%, rgba(34,211,238,.2), transparent 50%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(
+            1200px 600px at 80% -10%,
+            rgba(124, 134, 255, 0.25),
+            transparent 50%
+          ),
+          radial-gradient(
+            800px 400px at -10% -20%,
+            rgba(34, 211, 238, 0.2),
+            transparent 50%
+          ),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
 
-    /* Container */
-    .wrap{ max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      /* Container */
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-    /* Header */
-    header{
-      position: sticky; top: 0; z-index: 50;
-      backdrop-filter: saturate(120%) blur(8px);
-      background: linear-gradient(to bottom, rgba(11,15,26,.9), rgba(11,15,26,.6));
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .nav{ display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text); font-weight:700; letter-spacing:.2px; }
-    .logo{
-      width: 34px; height: 34px; border-radius: 10px;
-      background: conic-gradient(from 220deg, var(--brand), var(--brand-2));
-      box-shadow: 0 6px 16px var(--ring), inset 0 0 0 1px rgba(255,255,255,.15);
-    }
-    nav a{ color: var(--muted); text-decoration: none; margin-left: 18px; font-weight: 500; }
-    nav a:hover{ color: var(--text); }
-    .cta{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      background: linear-gradient(180deg, var(--brand), #5564ff);
-      color:#fff; padding: 10px 16px; border-radius: 12px; text-decoration:none; font-weight:600;
-      box-shadow: 0 10px 20px rgba(108,124,255,.25);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-    .cta.secondary{
-      background: transparent; color: var(--text);
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: none;
-    }
+      /* Header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: saturate(120%) blur(8px);
+        background: linear-gradient(
+          to bottom,
+          rgba(11, 15, 26, 0.9),
+          rgba(11, 15, 26, 0.6)
+        );
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+      .logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: conic-gradient(from 220deg, var(--brand), var(--brand-2));
+        box-shadow: 0 6px 16px var(--ring),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 18px;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: var(--text);
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(180deg, var(--brand), #5564ff);
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 10px 20px rgba(108, 124, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .cta.secondary {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: none;
+      }
 
-    /* Hero */
-    .hero{ padding: 72px 0 40px; text-align:center; }
-    .eyebrow{ display:inline-block; padding:6px 12px; border-radius:999px; font-size:12px; letter-spacing:.2px; font-weight:600; color:#c8d3f9; background:rgba(124,134,255,.1); border:1px solid rgba(124,134,255,.25); }
-    h1{ font-size: clamp(28px, 5vw, 54px); line-height: 1.1; margin: 18px auto 14px; max-width: 880px; }
-    .sub{ font-size: clamp(15px, 2.2vw, 18px); color: var(--muted); max-width: 760px; margin: 0 auto 26px; }
-    .hero-cta{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+      /* Hero */
+      .hero {
+        padding: 72px 0 40px;
+        text-align: center;
+      }
+      .eyebrow {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        font-weight: 600;
+        color: #c8d3f9;
+        background: rgba(124, 134, 255, 0.1);
+        border: 1px solid rgba(124, 134, 255, 0.25);
+      }
+      h1 {
+        font-size: clamp(28px, 5vw, 54px);
+        line-height: 1.1;
+        margin: 18px auto 14px;
+        max-width: 880px;
+      }
+      .sub {
+        font-size: clamp(15px, 2.2vw, 18px);
+        color: var(--muted);
+        max-width: 760px;
+        margin: 0 auto 26px;
+      }
+      .hero-cta {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-    /* Showcase card */
-    .mock{
-      margin: 46px auto 0; max-width: 980px; border-radius: calc(var(--radius) + 4px);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .mock .bar{
-      display:flex; align-items:center; gap:8px; padding:10px 12px;
-      background: rgba(255,255,255,.05); border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .dot{ width:10px; height:10px; border-radius:50%; background:#ff5f56; box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f; opacity:.9; }
-    .mock .screen{ padding: 26px; background: radial-gradient(800px 250px at 80% 0%, rgba(108,124,255,.15), transparent 50%), linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); }
-    .grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .card{
-      grid-column: span 4; background: var(--card); border: 1px solid rgba(255,255,255,.08);
-      padding: 18px; border-radius: 14px; box-shadow: var(--shadow);
-    }
-    .card h3{ margin: 8px 0 6px; font-size: 18px; }
-    .pill{ display:inline-block; font-size:11px; padding:4px 8px; border-radius:999px; background: rgba(34,211,238,.14); color:#bdf3ff; border:1px solid rgba(34,211,238,.4); }
+      /* Showcase card */
+      .mock {
+        margin: 46px auto 0;
+        max-width: 980px;
+        border-radius: calc(var(--radius) + 4px);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .mock .bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ff5f56;
+        box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+        opacity: 0.9;
+      }
+      .mock .screen {
+        padding: 26px;
+        background: radial-gradient(
+            800px 250px at 80% 0%,
+            rgba(108, 124, 255, 0.15),
+            transparent 50%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.02),
+            rgba(255, 255, 255, 0.01)
+          );
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+      }
+      .card {
+        grid-column: span 4;
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 18px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+      .card h3 {
+        margin: 8px 0 6px;
+        font-size: 18px;
+      }
+      .pill {
+        display: inline-block;
+        font-size: 11px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(34, 211, 238, 0.14);
+        color: #bdf3ff;
+        border: 1px solid rgba(34, 211, 238, 0.4);
+      }
 
-    /* Features */
-    .section{ padding: 80px 0; }
-    .section h2{ text-align:center; font-size: clamp(22px,4vw,36px); margin:0 0 12px; }
-    .section p.lead{ text-align:center; color:var(--muted); max-width:720px; margin:0 auto 28px; }
-    .features{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .feature{
-      background: var(--panel); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:22px; box-shadow: var(--shadow);
-    }
-    .feature h3{ margin: 8px 0 6px; }
-    .icon{ width: 40px; height: 40px; border-radius: 12px; display:grid; place-items:center; background: rgba(124,134,255,.15); border:1px solid rgba(124,134,255,.35); }
+      /* Features */
+      .section {
+        padding: 80px 0;
+      }
+      .section h2 {
+        text-align: center;
+        font-size: clamp(22px, 4vw, 36px);
+        margin: 0 0 12px;
+      }
+      .section p.lead {
+        text-align: center;
+        color: var(--muted);
+        max-width: 720px;
+        margin: 0 auto 28px;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .feature {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+      .feature h3 {
+        margin: 8px 0 6px;
+      }
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: rgba(124, 134, 255, 0.15);
+        border: 1px solid rgba(124, 134, 255, 0.35);
+      }
 
-    /* Pricing */
-    .pricing{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .price-card{ background: var(--panel); border:1px solid rgba(255,255,255,.1); border-radius:18px; padding:24px; box-shadow: var(--shadow); }
-    .price{ font-size: 40px; font-weight: 800; margin: 16px 0; }
-    .badge{ display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.06); font-size:12px; }
-    .list{ list-style:none; padding:0; margin:16px 0; color: var(--muted); }
-    .list li{ padding: 6px 0; }
+      /* Pricing */
+      .pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .price-card {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+      .price {
+        font-size: 40px;
+        font-weight: 800;
+        margin: 16px 0;
+      }
+      .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.06);
+        font-size: 12px;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0;
+        color: var(--muted);
+      }
+      .list li {
+        padding: 6px 0;
+      }
 
-    /* FAQ */
-    details{ background: var(--panel); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding: 16px 18px; }
-    details + details{ margin-top: 12px; }
-    summary{ cursor: pointer; font-weight: 600; }
+      /* FAQ */
+      details {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 16px 18px;
+      }
+      details + details {
+        margin-top: 12px;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
 
-    /* Footer */
-    footer{ padding: 28px 0 60px; color: var(--muted); border-top:1px solid rgba(255,255,255,.08); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); }
+      /* Footer */
+      footer {
+        padding: 28px 0 60px;
+        color: var(--muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+      }
 
-    /* Responsive */
-    @media (max-width: 1024px){
-      .grid .card{ grid-column: span 6; }
-      .features, .pricing{ grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 680px){
-      nav{ display:none; }
-      .grid .card{ grid-column: span 12; }
-      .features, .pricing{ grid-template-columns: 1fr; }
-      .hero{ padding-top: 48px; }
-    }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="wrap nav" role="navigation" aria-label="Main">
-      <a class="brand" href="#top" aria-label="Homepage">
-        <span class="logo" aria-hidden="true"></span>
-        <span>NovaLaunch</span>
-      </a>
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a class="cta secondary" href="#contact">Contact</a>
-        <a class="cta" href="#get-started">Get Started</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <main id="top" class="wrap">
-    <section class="hero" aria-labelledby="hero-title">
-      <span class="eyebrow">🚀 Launch faster with confidence</span>
-      <h1 id="hero-title">A polished landing page template you can ship today</h1>
-      <p class="sub">Drop this single file into your project and customize the text. Responsive, accessible, and production-ready—no build tools or JS required.</p>
-      <div class="hero-cta">
-        <a class="cta" href="#get-started" aria-label="Get started now">Start Free</a>
-        <a class="cta secondary" href="#features" aria-label="See features">See Features</a>
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .grid .card {
+          grid-column: span 6;
+        }
+        .features,
+        .pricing {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 680px) {
+        nav {
+          display: none;
+        }
+        .grid .card {
+          grid-column: span 12;
+        }
+        .features,
+        .pricing {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding-top: 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="wrap nav" role="navigation" aria-label="Main">
+        <a class="brand" href="#top" aria-label="Homepage">
+          <span class="logo" aria-hidden="true"></span>
+          <span>NovaLaunch</span>
+        </a>
+        <nav>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a class="cta secondary" href="/contact.html">Contact</a>
+          <a class="cta" href="#get-started">Get Started</a>
+        </nav>
       </div>
+    </header>
 
-      <!-- Showcase Mockup -->
-      <div class="mock" role="img" aria-label="Product interface preview">
-        <div class="bar"><span class="dot"></span></div>
-        <div class="screen">
-          <div class="grid">
-            <article class="card">
-              <span class="pill">Analytics</span>
-              <h3>Real-time insights</h3>
-              <p>Track signups, conversions, and retention with a live dashboard.</p>
-            </article>
-            <article class="card">
-              <span class="pill">Automation</span>
-              <h3>Set and forget</h3>
-              <p>Workflows that welcome, nurture, and re-engage users automatically.</p>
-            </article>
-            <article class="card">
-              <span class="pill">Security</span>
-              <h3>Enterprise-grade</h3>
-              <p>SSO, 2FA, and audit logs baked in from day one.</p>
-            </article>
+    <!-- Hero -->
+    <main id="top" class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <span class="eyebrow">🚀 Launch faster with confidence</span>
+        <h1 id="hero-title">
+          A polished landing page template you can ship today
+        </h1>
+        <p class="sub">
+          Drop this single file into your project and customize the text.
+          Responsive, accessible, and production-ready—no build tools or JS
+          required.
+        </p>
+        <div class="hero-cta">
+          <a class="cta" href="#get-started" aria-label="Get started now"
+            >Start Free</a
+          >
+          <a class="cta secondary" href="#features" aria-label="See features"
+            >See Features</a
+          >
+        </div>
+
+        <!-- Showcase Mockup -->
+        <div class="mock" role="img" aria-label="Product interface preview">
+          <div class="bar"><span class="dot"></span></div>
+          <div class="screen">
+            <div class="grid">
+              <article class="card">
+                <span class="pill">Analytics</span>
+                <h3>Real-time insights</h3>
+                <p>
+                  Track signups, conversions, and retention with a live
+                  dashboard.
+                </p>
+              </article>
+              <article class="card">
+                <span class="pill">Automation</span>
+                <h3>Set and forget</h3>
+                <p>
+                  Workflows that welcome, nurture, and re-engage users
+                  automatically.
+                </p>
+              </article>
+              <article class="card">
+                <span class="pill">Security</span>
+                <h3>Enterprise-grade</h3>
+                <p>SSO, 2FA, and audit logs baked in from day one.</p>
+              </article>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Features -->
-    <section id="features" class="section" aria-labelledby="features-title">
-      <h2 id="features-title">Features that matter</h2>
-      <p class="lead">Everything you need to launch and grow—beautifully crafted and easy to customize.</p>
-      <div class="features">
-        <div class="feature">
-          <div class="icon" aria-hidden="true">⚡</div>
-          <h3>Blazing fast</h3>
-          <p>Pure HTML and CSS means instant loads and excellent SEO.</p>
+      <!-- Features -->
+      <section id="features" class="section" aria-labelledby="features-title">
+        <h2 id="features-title">Features that matter</h2>
+        <p class="lead">
+          Everything you need to launch and grow—beautifully crafted and easy to
+          customize.
+        </p>
+        <div class="features">
+          <div class="feature">
+            <div class="icon" aria-hidden="true">⚡</div>
+            <h3>Blazing fast</h3>
+            <p>Pure HTML and CSS means instant loads and excellent SEO.</p>
+          </div>
+          <div class="feature">
+            <div class="icon" aria-hidden="true">🎯</div>
+            <h3>Conversion-focused</h3>
+            <p>Clear messaging, strong CTAs, and trust-building layout.</p>
+          </div>
+          <div class="feature">
+            <div class="icon" aria-hidden="true">🛡️</div>
+            <h3>Accessible by default</h3>
+            <p>
+              Semantic markup, proper contrast, and keyboard-friendly controls.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="icon" aria-hidden="true">🧩</div>
+            <h3>Modular sections</h3>
+            <p>Copy‑paste cards, pricing, FAQs, and more as needed.</p>
+          </div>
+          <div class="feature">
+            <div class="icon" aria-hidden="true">🌗</div>
+            <h3>Dark-first design</h3>
+            <p>Modern aesthetic with tasteful gradients and soft depth.</p>
+          </div>
+          <div class="feature">
+            <div class="icon" aria-hidden="true">⚙️</div>
+            <h3>Easy to theme</h3>
+            <p>Tweak CSS variables to match your brand in seconds.</p>
+          </div>
         </div>
-        <div class="feature">
-          <div class="icon" aria-hidden="true">🎯</div>
-          <h3>Conversion-focused</h3>
-          <p>Clear messaging, strong CTAs, and trust-building layout.</p>
-        </div>
-        <div class="feature">
-          <div class="icon" aria-hidden="true">🛡️</div>
-          <h3>Accessible by default</h3>
-          <p>Semantic markup, proper contrast, and keyboard-friendly controls.</p>
-        </div>
-        <div class="feature">
-          <div class="icon" aria-hidden="true">🧩</div>
-          <h3>Modular sections</h3>
-          <p>Copy‑paste cards, pricing, FAQs, and more as needed.</p>
-        </div>
-        <div class="feature">
-          <div class="icon" aria-hidden="true">🌗</div>
-          <h3>Dark-first design</h3>
-          <p>Modern aesthetic with tasteful gradients and soft depth.</p>
-        </div>
-        <div class="feature">
-          <div class="icon" aria-hidden="true">⚙️</div>
-          <h3>Easy to theme</h3>
-          <p>Tweak CSS variables to match your brand in seconds.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="section" aria-labelledby="pricing-title">
-      <h2 id="pricing-title">Simple, transparent pricing</h2>
-      <p class="lead">Start free. Upgrade when you’re ready.</p>
-      <div class="pricing">
-        <div class="price-card" aria-label="Starter plan">
-          <span class="badge">Starter</span>
-          <div class="price">₹0</div>
-          <p>For personal projects and evaluation.</p>
-          <ul class="list">
-            <li>Up to 1 project</li>
-            <li>Community support</li>
-            <li>Basic analytics</li>
-          </ul>
-          <a class="cta secondary" href="#get-started">Get Started</a>
+      <!-- Pricing -->
+      <section id="pricing" class="section" aria-labelledby="pricing-title">
+        <h2 id="pricing-title">Simple, transparent pricing</h2>
+        <p class="lead">Start free. Upgrade when you’re ready.</p>
+        <div class="pricing">
+          <div class="price-card" aria-label="Starter plan">
+            <span class="badge">Starter</span>
+            <div class="price">₹0</div>
+            <p>For personal projects and evaluation.</p>
+            <ul class="list">
+              <li>Up to 1 project</li>
+              <li>Community support</li>
+              <li>Basic analytics</li>
+            </ul>
+            <a class="cta secondary" href="#get-started">Get Started</a>
+          </div>
+          <div
+            class="price-card"
+            aria-label="Pro plan"
+            style="outline: 2px solid rgba(124, 134, 255, 0.25)"
+          >
+            <span class="badge">Most Popular</span>
+            <div class="price">
+              ₹799<span style="font-size: 16px; color: var(--muted)">/mo</span>
+            </div>
+            <p>Best for growing startups and teams.</p>
+            <ul class="list">
+              <li>Unlimited projects</li>
+              <li>Priority email support</li>
+              <li>Advanced automations</li>
+            </ul>
+            <a class="cta" href="#get-started">Start Pro</a>
+          </div>
+          <div class="price-card" aria-label="Business plan">
+            <span class="badge">Business</span>
+            <div class="price">Custom</div>
+            <p>For larger teams needing SLAs & SSO.</p>
+            <ul class="list">
+              <li>All Pro features</li>
+              <li>SSO & SAML</li>
+              <li>Dedicated support</li>
+            </ul>
+            <a class="cta secondary" href="#contact">Contact Sales</a>
+          </div>
         </div>
-        <div class="price-card" aria-label="Pro plan" style="outline: 2px solid rgba(124,134,255,.25);">
-          <span class="badge">Most Popular</span>
-          <div class="price">₹799<span style="font-size:16px; color:var(--muted);">/mo</span></div>
-          <p>Best for growing startups and teams.</p>
-          <ul class="list">
-            <li>Unlimited projects</li>
-            <li>Priority email support</li>
-            <li>Advanced automations</li>
-          </ul>
-          <a class="cta" href="#get-started">Start Pro</a>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <p class="lead">Quick answers to common questions.</p>
+        <div class="wrap">
+          <details>
+            <summary>Can I use this template commercially?</summary>
+            <p>Yes. Customize it freely for personal or commercial projects.</p>
+          </details>
+          <details>
+            <summary>Is JavaScript required?</summary>
+            <p>No. This page is fully functional with HTML and CSS only.</p>
+          </details>
+          <details>
+            <summary>How do I change the theme colors?</summary>
+            <p>
+              Edit the CSS variables in the <code>:root</code> block near the
+              top of the file.
+            </p>
+          </details>
         </div>
-        <div class="price-card" aria-label="Business plan">
-          <span class="badge">Business</span>
-          <div class="price">Custom</div>
-          <p>For larger teams needing SLAs & SSO.</p>
-          <ul class="list">
-            <li>All Pro features</li>
-            <li>SSO & SAML</li>
-            <li>Dedicated support</li>
-          </ul>
-          <a class="cta secondary" href="#contact">Contact Sales</a>
+      </section>
+
+      <!-- Contact / CTA -->
+      <section id="get-started" class="section" aria-labelledby="cta-title">
+        <div class="wrap" style="text-align: center">
+          <h2 id="cta-title">Ready to launch?</h2>
+          <p class="lead">Drop your email and we’ll send setup instructions.</p>
+          <form
+            id="contact"
+            action="#"
+            method="post"
+            style="max-width: 560px; margin: 0 auto; display: flex; gap: 10px"
+          >
+            <label for="email" class="visually-hidden">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="you@company.com"
+              aria-label="Email address"
+              style="
+                flex: 1;
+                padding: 14px 16px;
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                background: #0c1120;
+                color: var(--text);
+                outline-color: var(--brand);
+              "
+            />
+            <button class="cta" type="submit">Join Waitlist</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div
+        class="wrap"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 12px;
+        "
+      >
+        <div><strong>NovaLaunch</strong> · © <span id="year"></span></div>
+        <div>
+          <a href="#features" style="margin-right: 12px; color: inherit"
+            >Features</a
+          >
+          <a href="#pricing" style="margin-right: 12px; color: inherit"
+            >Pricing</a
+          >
+          <a href="#faq" style="color: inherit">FAQ</a>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- FAQ -->
-    <section id="faq" class="section" aria-labelledby="faq-title">
-      <h2 id="faq-title">Frequently asked questions</h2>
-      <p class="lead">Quick answers to common questions.</p>
-      <div class="wrap">
-        <details>
-          <summary>Can I use this template commercially?</summary>
-          <p>Yes. Customize it freely for personal or commercial projects.</p>
-        </details>
-        <details>
-          <summary>Is JavaScript required?</summary>
-          <p>No. This page is fully functional with HTML and CSS only.</p>
-        </details>
-        <details>
-          <summary>How do I change the theme colors?</summary>
-          <p>Edit the CSS variables in the <code>:root</code> block near the top of the file.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- Contact / CTA -->
-    <section id="get-started" class="section" aria-labelledby="cta-title">
-      <div class="wrap" style="text-align:center;">
-        <h2 id="cta-title">Ready to launch?</h2>
-        <p class="lead">Drop your email and we’ll send setup instructions.</p>
-        <form id="contact" action="#" method="post" style="max-width:560px; margin: 0 auto; display:flex; gap:10px;">
-          <label for="email" class="visually-hidden">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@company.com" aria-label="Email address" style="flex:1; padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:#0c1120; color:var(--text); outline-color: var(--brand);" />
-          <button class="cta" type="submit">Join Waitlist</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-      <div>
-        <strong>NovaLaunch</strong> · © <span id="year"></span>
-      </div>
-      <div>
-        <a href="#features" style="margin-right:12px; color:inherit;">Features</a>
-        <a href="#pricing" style="margin-right:12px; color:inherit;">Pricing</a>
-        <a href="#faq" style="color:inherit;">FAQ</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // small enhancement: update year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <style>
-    /* Visually hidden utility for accessible labels */
-    .visually-hidden{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px, 1px, 1px, 1px); white-space:nowrap; }
-  </style>
-</body>
+    <script>
+      // small enhancement: update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <style>
+      /* Visually hidden utility for accessible labels */
+      .visually-hidden {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+      }
+    </style>
+  </body>
 </html>
